@@ -1,0 +1,2 @@
+﻿Console.WriteLine("Write city names. Anything goes, as long as it does not include a number.");
+Console.WriteLine("When you feel satisfied that you have written LITERALLY EVERY SINGLE city name ever you can type \"exit\"");
