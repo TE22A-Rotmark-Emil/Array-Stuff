@@ -6,8 +6,15 @@ bool knowsMoreCities = true;
 bool isValid = true;
 do{
     Console.WriteLine("write a city name thx");
-    string cityName = Console.ReadLine();
+    string cityName = Console.ReadLine().Trim();
+    if (cityName.ToLower() == "exit"){
+        break;
+    }
     foreach (char number in numbers){
+        while (cityName == ""){
+            Console.WriteLine("bro TYPE SOMETHING?");
+            cityName = Console.ReadLine().Trim();
+        }
         if (cityName.Contains(number)){
             isValid = false;
             break;
@@ -18,11 +25,11 @@ do{
     }
     if (isValid){
         Console.WriteLine($"{cityName} has been added to your list of city names");
+        cities.Add(cityName);
     }
     else{
         Console.WriteLine("say a REAL PLACE with REAL PEOPLE");
     }
-    Console.WriteLine(cities.Count());
 } while (cities.Count() < 10 && knowsMoreCities);
 
 if (cities.Count >= 10){
@@ -39,5 +46,5 @@ else{
     Console.WriteLine("WHAT?? ARE you STUPID?? 0 CITIES? new york city stockholm ANYTHING PLEASE");
     Console.ReadLine();
     Console.WriteLine("I don't like you");
-    Console.ReadLine();
 }
+Console.ReadLine();
