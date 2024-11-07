@@ -4,6 +4,7 @@ char[] numbers = "1234567890".ToCharArray();
 List<string> cities = new();
 bool knowsMoreCities = true;
 bool isValid = true;
+
 do{
     Console.WriteLine("write a city name thx");
     string cityName = Console.ReadLine().Trim();
